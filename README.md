@@ -3,4 +3,4 @@
 - Daniel Wu
 
 ### Pages
-Linke [here](https://dwu0501.github.io/Lab6_Starter/)
+Link [here](https://dwu0501.github.io/Lab6_Starter/)
