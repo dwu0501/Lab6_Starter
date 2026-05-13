@@ -12,9 +12,18 @@ class RecipeCard extends HTMLElement {
 		// A3. TODO - Create a style element - This will hold all of the styles for the Web Component
 		// A4. TODO - Insert all of the styles from cardTemplate.html into the <style> element you just made (copy everything INSIDE the <style> tag>)
 		// A5. TODO - Append the <style> and <article> elements to the Shadow DOM
+		
+		//A1
 		let shadowEl = this.attachShadow({mode: 'open'});
+		
+		//A2
 		this.articleEl = document.createElement('article');
+		
+		
+		//A3
 		let styleEl = document.createElement('style');
+		
+		//A4
 		styleEl.textContent = `
 		* {
 			font-family: sans-serif;
@@ -93,6 +102,8 @@ class RecipeCard extends HTMLElement {
 		}
 			}`;
 
+		
+		//A5
 		shadowEl.append(this.articleEl);
 		shadowEl.append(styleEl);
 	}
@@ -130,7 +141,12 @@ class RecipeCard extends HTMLElement {
 		// 			 Do NOT include the <article> tags within the innerHTML of the element you create.
 		//           Remember to replace all the placeholders in the template with the data passed in.
 		//           i.e. imgSrc, titleLnk, etc
+		
+		
+		//A6
 		this.articleEl.innerHTML = 
+
+		//A7
 		`
 		<img src= ${data.imgSrc}
 			alt= ${data.imgAlt}>
@@ -140,7 +156,7 @@ class RecipeCard extends HTMLElement {
 		<p class="organization">${data.organization}</p>
 		<div class="rating">
 			<span>${data.rating}</span>
-			<img src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
+			<img ./src="/assets/images/icons/${data.rating}-star.svg" alt="${data.rating} stars">
 			<span>${data.numRatings}</span>
 		</div>
 		<time>${data.lengthTime}</time>
